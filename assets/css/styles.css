@@ -910,6 +910,7 @@ h1 {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    display: none !important;
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   }
 
@@ -918,6 +919,7 @@ h1 {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+    display: flex !important;
   }
 
   .nav-toggle {
