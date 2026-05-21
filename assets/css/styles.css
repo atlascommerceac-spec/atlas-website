@@ -680,7 +680,11 @@ h1 {
 
 /* Contact extras */
 .contact-testimonial { align-self: start; }
-.what-to-expect { margin-top: 1rem; color: var(--muted); font-size: 0.95rem; }
+.what-to-expect {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 
 /* Small responsive tweaks */
 @media (max-width: 640px) {
@@ -755,9 +759,20 @@ h1 {
   .split-grid {
     grid-template-columns: 1fr !important;
   }
+}
 
+@media (max-width: 800px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .contact-info {
+    padding: 2rem 1.5rem;
   }
 }
 
@@ -824,12 +839,18 @@ h1 {
 
 .contact-card {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
 }
 
 .contact-card label {
   font-size: 0.95rem;
   color: var(--text);
+  margin-top: 0.5rem;
 }
 
 .contact-card input,
@@ -861,7 +882,16 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.contact-actions .btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  pointer-events: auto !important;
 }
 
 .contact-card input:focus,
@@ -874,6 +904,11 @@ h1 {
 .contact-info {
   display: grid;
   gap: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
 }
 
 .contact-info h3 {
@@ -1018,10 +1053,15 @@ h1 {
 
   .contact-card .btn {
     width: 100%;
+    z-index: 5;
+    position: relative;
   }
 
   .contact-actions .btn {
     width: 100%;
+    z-index: 5;
+    position: relative;
+    pointer-events: auto !important;
   }
 
   main {
