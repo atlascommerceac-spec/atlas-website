@@ -31,6 +31,11 @@ body {
   color: var(--text);
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 .background-layer {
   position: fixed;
   inset: 0;
@@ -836,6 +841,10 @@ h1 {
   background: rgba(255, 255, 255, 0.08);
   color: var(--text);
   padding: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-card select {
@@ -1000,6 +1009,7 @@ h1 {
   .contact-card select,
   .contact-card textarea {
     padding: 0.95rem;
+    font-size: 16px;
   }
 
   .contact-card textarea {
@@ -1012,5 +1022,10 @@ h1 {
 
   .contact-actions .btn {
     width: 100%;
+  }
+
+  main {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
